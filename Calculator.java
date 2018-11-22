@@ -96,6 +96,19 @@ public class Calculator {
 	}
 	
 	/**
+	 * This code
+	 */
+	public void executeOperation() {
+		number2 = Double.parseDouble(txtOutput.getText());
+		switch (operator) {
+			case '+': number1 += number2; break;
+			case '-': number1 -= number2; break;
+			case '*': number1 *= number2; break;
+			case '/': number1 /= number2; break;
+		}
+	}
+	
+	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
@@ -104,7 +117,7 @@ public class Calculator {
 		frmSimpleCalculator.getContentPane().setForeground(Color.GRAY);
 		frmSimpleCalculator.getContentPane().setBackground(Color.DARK_GRAY);
 		frmSimpleCalculator.setForeground(Color.WHITE);
-		frmSimpleCalculator.setBackground(Color.RED);
+		frmSimpleCalculator.setBackground(Color.BLACK);
 		frmSimpleCalculator.setTitle("Simple Calculator");
 		frmSimpleCalculator.setResizable(false);
 		frmSimpleCalculator.setBounds(100, 100, 302, 414);
@@ -169,18 +182,11 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				if (operator == '=') {
 					number1 = Double.parseDouble(txtOutput.getText());
-				} else {
-					number2 = Double.parseDouble(txtOutput.getText());
-					switch (operator) {
-						case '+': number1 += number2; break;
-						case '-': number1 -= number2; break;
-						case '*': number1 *= number2; break;
-						case '/': number1 /= number2; break;
-					}
-				}
+				} else 
+					executeOperation();
 				show(number1);
 				operator = '-';
-				operand = true;
+				operand = true;		
 			}
 		});
 		btnMinus.setFont(UIManager.getFont("Button.font"));
@@ -234,18 +240,11 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				if (operator == '=') {
 					number1 = Double.parseDouble(txtOutput.getText());
-				} else {
-					number2 = Double.parseDouble(txtOutput.getText());
-					switch (operator) {
-						case '+': number1 += number2; break;
-						case '-': number1 -= number2; break;
-						case '*': number1 *= number2; break;
-						case '/': number1 /= number2; break;
-					}
-				}
+				} else 
+					executeOperation();
 				show(number1);
 				operator = '*';
-				operand = true;
+				operand = true;		
 			}
 		});
 		btnMult.setFont(UIManager.getFont("Button.font"));
@@ -299,18 +298,11 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				if (operator == '=') {
 					number1 = Double.parseDouble(txtOutput.getText());
-				} else {
-					number2 = Double.parseDouble(txtOutput.getText());
-					switch (operator) {
-						case '+': number1 += number2; break;
-						case '-': number1 -= number2; break;
-						case '*': number1 *= number2; break;
-						case '/': number1 /= number2; break;
-					}
-				}
+				} else 
+					executeOperation();
 				show(number1);
 				operator = '/';
-				operand = true;
+				operand = true;		
 			}
 		});
 		btnDiv.setFont(UIManager.getFont("Button.font"));
@@ -367,16 +359,10 @@ public class Calculator {
 		btnEqual.setBackground(Color.BLACK);
 		btnEqual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				number2 = Double.parseDouble(txtOutput.getText());
-				switch (operator) {
-					case '+': number1 += number2; break;
-					case '-': number1 -= number2; break;
-					case '*': number1 *= number2; break;
-					case '/': number1 /= number2; break;
-				}
+				executeOperation();
 				show(number1);
 				operator = '=';
-				operand = true;
+				operand = true;		
 			}
 		});
 		btnEqual.setFont(UIManager.getFont("Button.font"));
@@ -451,18 +437,11 @@ public class Calculator {
 			public void actionPerformed(ActionEvent e) {
 				if (operator == '=') {
 					number1 = Double.parseDouble(txtOutput.getText());
-				} else {
-					number2 = Double.parseDouble(txtOutput.getText());
-					switch (operator) {
-						case '+': number1 += number2; break;
-						case '-': number1 -= number2; break;
-						case '*': number1 *= number2; break;
-						case '/': number1 /= number2; break;
-					}
-				}
+				} else 
+					executeOperation();
 				show(number1);
 				operator = '+';
-				operand = true;
+				operand = true;		
 			}
 		});
 		btnPlus.setFont(UIManager.getFont("Button.font"));
