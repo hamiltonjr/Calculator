@@ -87,7 +87,7 @@ public class Calculator {
 	 * This code 
 	 */
 	public void digitPressed(String digit) {
-		if (operand || (!operand && txtOutput.getText().equals(digit))) {
+		if (operand || (!operand && txtOutput.getText().equals("0"))) {
 			txtOutput.setText("");
 			operand = false;
 		}
