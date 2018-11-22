@@ -84,6 +84,18 @@ public class Calculator {
 	}
 	
 	/**
+	 * This code 
+	 */
+	public void digitPressed(String digit) {
+		if (operand || (!operand && txtOutput.getText().equals(digit))) {
+			txtOutput.setText("");
+			operand = false;
+		}
+		if (txtOutput.getText().length() < OUTPUT_SIZE)
+			txtOutput.setText(txtOutput.getText() + digit);		
+	}
+	
+	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
@@ -116,12 +128,7 @@ public class Calculator {
 		btn7.setBackground(Color.BLACK);
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "7");
+				digitPressed("7");
 			}
 		});
 		btn7.setFont(UIManager.getFont("Button.font"));
@@ -134,12 +141,7 @@ public class Calculator {
 		btn8.setBackground(Color.BLACK);
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "8");
+				digitPressed("8");
 			}
 		});
 		btn8.setFont(UIManager.getFont("Button.font"));
@@ -152,12 +154,7 @@ public class Calculator {
 		btn9.setBackground(Color.BLACK);
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "9");
+				digitPressed("9");
 			}
 		});
 		btn9.setFont(UIManager.getFont("Button.font"));
@@ -196,12 +193,7 @@ public class Calculator {
 		btn4.setBackground(Color.BLACK);
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "4");
+				digitPressed("4");
 			}
 		});
 		btn4.setFont(UIManager.getFont("Button.font"));
@@ -214,12 +206,7 @@ public class Calculator {
 		btn5.setBackground(Color.BLACK);
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "5");
+				digitPressed("5");
 			}
 		});
 		btn5.setFont(UIManager.getFont("Button.font"));
@@ -232,12 +219,7 @@ public class Calculator {
 		btn6.setBackground(Color.BLACK);
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "6");
+				digitPressed("6");
 			}
 		});
 		btn6.setFont(UIManager.getFont("Button.font"));
@@ -276,12 +258,7 @@ public class Calculator {
 		btn1.setBackground(Color.BLACK);
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "1");
+				digitPressed("1");
 			}
 		});
 		btn1.setFont(UIManager.getFont("Button.font"));
@@ -294,12 +271,7 @@ public class Calculator {
 		btn2.setBackground(Color.BLACK);
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "2");
+				digitPressed("2");
 			}
 		});
 		btn2.setFont(UIManager.getFont("Button.font"));
@@ -312,12 +284,7 @@ public class Calculator {
 		btn3.setBackground(Color.BLACK);
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "3");
+				digitPressed("3");
 			}
 		});
 		btn3.setFont(UIManager.getFont("Button.font"));
@@ -356,12 +323,7 @@ public class Calculator {
 		btn0.setBackground(Color.BLACK);
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (operand || (!operand && txtOutput.getText().equals("0"))) {
-					txtOutput.setText("");
-					operand = false;
-				}
-				if (txtOutput.getText().length() < OUTPUT_SIZE)
-					txtOutput.setText(txtOutput.getText() + "0");
+				digitPressed("0");
 			}
 		});
 		btn0.setFont(UIManager.getFont("Button.font"));
