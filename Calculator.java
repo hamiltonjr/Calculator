@@ -5,18 +5,16 @@
 
 package calculator;
 
+import java.awt.Color;
 import java.awt.EventQueue;
-
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import java.awt.Font;
-import javax.swing.JButton;
 import javax.swing.UIManager;
-import java.awt.event.ActionListener;
-import java.util.Objects;
-import java.awt.event.ActionEvent;
-import java.awt.Color;
 
 /**
  * This class implements the calculator itself.
@@ -126,6 +124,7 @@ public class Calculator {
 		
 		// set the display.
 		txtOutput = new JTextField();
+		txtOutput.setEditable(false);
 		txtOutput.setForeground(Color.WHITE);
 		txtOutput.setBackground(Color.BLACK);
 		txtOutput.setFont(new Font("Ubuntu", Font.PLAIN, 30));
