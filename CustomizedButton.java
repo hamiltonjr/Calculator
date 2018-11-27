@@ -1,28 +1,35 @@
 /**
- * This class allows reuse repetitive info about buttons.
+ * This class implements a customized button for calculator project. It is part of a reprogramming of
+ * Calculator Project using better object-oriented practices.
+ * 
+ * @author Hamilton G. Jr (hamiltonjr2010@gmail.com)
+ * @version 2.0 (2018 11 26)
  */
 package calculator;
 
 import java.awt.Color;
-
 import javax.swing.JButton;
-import javax.swing.UIManager;
 
 public class CustomizedButton {
-	private static final Color FOREGROUND = Color.CYAN;
-	private static final Color BACKGROUND = Color.BLACK;
+	// colors
+	private static final Color F = Color.WHITE;
+	private static final Color B = Color.BLACK;
+	// dimension
+	private static final int W = 60;
+	private static final int H = 50;
+	// button
 	private JButton btn;
 	
-	public CustomizedButton(String keyword, int x, int y, int width, int height) {
-		btn = new JButton(keyword);
-		btn.setForeground(FOREGROUND);
-		btn.setBackground(BACKGROUND);
-		btn.setFont(UIManager.getFont("Button.font"));
-		btn.setBounds(x, y, width, height);
+	// constructor
+	public CustomizedButton(String key, int x, int y) {
+		btn = new JButton(key);
+		btn.setForeground(F);
+		btn.setBackground(B);
+		btn.setBounds(x, y, W, H);
 	}
-
-	/**
-	 * @return the btn
-	 */
-	public JButton getBtn() { return btn; }
+	
+	// getter
+	public JButton getButton() {
+		return btn;
+	}
 }
